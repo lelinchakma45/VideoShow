@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:background="@drawable/background_controls"
+        android:paddingBottom="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/keyboard_backspace_24px"
+                app:tint ="@color/white"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="lorem Istapm"
+                android:layout_marginStart="10dp"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/cast_24px"
+                app:tint="@color/white"/>
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginHorizontal="5dp"
+                android:src="@drawable/closed_caption_24px"
+                app:tint="@color/white"/>
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/select_window_2_24px"
+                app:tint="@color/white"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingTop="30dp"
+        android:background="@drawable/backgrouns_controls_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:layout_marginHorizontal="10dp">
+                   <TextView
+                       android:id="@+id/tv_current_time"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:paddingEnd="8dp"
+                       android:text="00:00"
+                       android:textColor="#FFFFFF" />
+
+                   <SeekBar
+                       android:id="@+id/seek_bar"
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:progressTint="@color/success"
+                       android:thumbTint="@color/gray"/>
+
+                   <TextView
+                       android:id="@+id/tv_total_duration"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:paddingStart="8dp"
+                       android:text="00:00"
+                       android:textColor="#FFFFFF" />
+           </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp">
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/lock"
+                                app:tint ="@color/white"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+                            <ImageView
+                                android:id="@+id/btn_rewind"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/replay_10_24px"
+                                app:tint ="@color/white"/>
+
+                            <ImageView
+                                android:id="@+id/btn_pause"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/pause_24px"
+                                app:tint ="@color/white"/>
+
+                            <ImageView
+                                android:id="@+id/btn_forward"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/forward_10_24px"
+                                app:tint ="@color/white"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp">
+                            <ImageView
+                                android:id="@+id/maximize"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/fullscreen_24px"
+                                app:tint ="@color/white"/>
+                    </LinearLayout>
+            </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
